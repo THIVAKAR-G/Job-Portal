@@ -15,7 +15,7 @@ export default function JobListPage() {
     const username = localStorage.getItem("username") || "Candidate";
 
     useEffect(() => {
-        fetch("http://127.0.0.1:8000/jobs")
+        fetch("http://192.241.133.222/jobs")
             .then((res) => res.json())
             .then((data) => setJobs(data))
             .catch((err) => console.error("Failed to fetch jobs:", err))
