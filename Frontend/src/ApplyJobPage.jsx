@@ -28,7 +28,7 @@ export default function ApplyJobPage() {
     const [showSuccess, setShowSuccess] = useState(false);
 
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/jobs/${jobId}`)
+        fetch(`http://192.241.133.222/jobs/${jobId}`)
             .then(async (res) => {
                 if (!res.ok) {
                     throw new Error("Unable to load job details.");
@@ -62,7 +62,7 @@ export default function ApplyJobPage() {
         };
 
         try {
-            const res = await fetch('http://127.0.0.1:8000/apply', {
+            const res = await fetch('http://192.241.133.222/apply', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
